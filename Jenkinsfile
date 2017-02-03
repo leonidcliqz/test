@@ -6,5 +6,5 @@ def printParams() {
 node {
     printParams()
     echo scm.dump()
-    echo scm.userRemoteConfigs
+    scm.userRemoteConfigs.each { echo it }
 }
