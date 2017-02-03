@@ -5,8 +5,8 @@ def printParams() {
 
 node {
     printParams()
-    echo env.CHANGE_TITLE
-    echo env.CHANGE_ID
+    echo $CHANGE_TITLE
+    echo $CHANGE_ID
     echo scm.dump()
-
+    echo scm.userRemoteConfigs
 }
