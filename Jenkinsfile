@@ -1,15 +1,20 @@
-@NonCPS
-def printParams() {
-      env.getEnvironment().each { name, value -> echo "Name: $name -> Value $value" }
-}
 
-@NonCPS
-def printGit() {
-    scm.userRemoteConfigs.each { name, value -> echo "Name: $name -> Value $value" }
-}
 
 node {
-    printParams()
-    echo scm.dump()
-    printGit()
+        
+            echo "env.ghprbActualCommit"
+
+            echo "env.ghprbActualCommitAuthor"
+
+            echo "env.ghprbActualCommitAuthorEmail"
+            echo "env.ghprbPullDescription"
+            echo "env.ghprbPullId"
+            echo "env.ghprbPullLink"
+            echo "env.ghprbPullTitle"
+            echo "env.ghprbSourceBranch"
+            echo "env.ghprbTargetBranch"
+            echo "env.sha1"
+                
+                    
 }
+
