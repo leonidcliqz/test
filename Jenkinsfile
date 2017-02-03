@@ -5,7 +5,7 @@ def printParams() {
 
 @NonCPS
 def printGit() {
-    scm.userRemoteConfigs.each { echo it }
+    scm.userRemoteConfigs.each { name, value -> echo "Name: $name -> Value $value" }
 }
 
 node {
